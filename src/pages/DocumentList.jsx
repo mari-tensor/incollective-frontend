@@ -9,7 +9,7 @@ export default function DocumentList() {
   const [loading, setLoading] = useState(true);
   const { user, logout, canEdit } = useAuth();
   const navigate = useNavigate();
-
+ 
   useEffect(() => {
     documents.list(search).then(setDocs).catch(console.error).finally(() => setLoading(false));
   }, [search]);
